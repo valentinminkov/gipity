@@ -1,16 +1,16 @@
 <template>
   <q-page class="column items-center justify-end">
-    <InputSection class="" placeholder="Write a message" active></InputSection>
+    <MessageSection placeholder="Write a message" active></MessageSection>
   </q-page>
 </template>
 
 <script lang="ts">
-import InputSection from 'components/InputSection.vue';
+import MessageSection from 'components/MessageSection.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { InputSection },
+  components: { MessageSection },
   setup() {
 
     return {};
