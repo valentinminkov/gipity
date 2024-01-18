@@ -11,6 +11,13 @@
 <script setup >
 import { ref } from 'vue'
 
+const { placeholder } = defineProps({
+  placeholder: {
+    type: String,
+    default: 'Write a message'
+  }
+});
+
 const text = ref('')
 
 const onTextSubmit = (evt) => {
