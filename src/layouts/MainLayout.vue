@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
-
+        <q-select v-model="model" :options="options" :borderless="true" />
         <q-toolbar-title>
           <b>G</b>i<b>p</b>i<b>t</b>y
         </q-toolbar-title>
@@ -32,8 +32,11 @@ export default defineComponent({
 
   setup() {
     const leftDrawerOpen = ref(false)
-
     return {
+      model: ref('GPT 4'),
+      options: [
+        'GPT 3.5', 'GPT 4', 'Other',
+      ],
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
