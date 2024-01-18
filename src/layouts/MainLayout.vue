@@ -12,7 +12,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-
+        <ChatHistory />
       </q-list>
     </q-drawer>
 
@@ -24,24 +24,28 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-
+import ChatHistory from 'components/ChatHistory.vue';
 
 export default defineComponent({
   name: 'MainLayout',
-
-
+  components: {
+    ChatHistory,
+  },
   setup() {
-    const leftDrawerOpen = ref(false)
+    const model = ref('GPT 4');
+    const options = ref(['GPT 3.5', 'GPT 4', 'Other']);
+    const leftDrawerOpen = ref(false);
+
+    const toggleLeftDrawer = () => {
+      leftDrawerOpen.value = !leftDrawerOpen.value;
+    };
+
     return {
-      model: ref('GPT 4'),
-      options: [
-        'GPT 3.5', 'GPT 4', 'Other',
-      ],
+      model,
+      options,
       leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
+      toggleLeftDrawer
+    };
   }
 });
 </script>
