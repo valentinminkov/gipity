@@ -1,19 +1,14 @@
 <template>
   <q-page class="column items-center justify-end">
-    <MessageSection placeholder="Write a message" active></MessageSection>
+    <MessageSection :placeholder="dummyPlaceholder" active></MessageSection>
   </q-page>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import MessageSection from 'components/MessageSection.vue';
-import { defineComponent } from 'vue';
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'IndexPage',
-  components: { MessageSection },
-  setup() {
+const dummyPlaceholder = ref('Write a message');
 
-    return {};
-  }
-});
 </script>
+
