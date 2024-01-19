@@ -10,7 +10,7 @@
 </template>
 
 
-<script setup >
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const { placeholder } = defineProps({
@@ -22,7 +22,7 @@ const { placeholder } = defineProps({
 
 const text = ref('')
 
-const onTextSubmit = (evt) => {
+const onTextSubmit = (evt: any) => {
   evt.preventDefault()
   // to do
   // call gpt api
