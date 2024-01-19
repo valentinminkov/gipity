@@ -1,13 +1,20 @@
 <template>
-  <div class="q-pa-md">
-    <h2>This is your chat history</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea voluptatibus eligendi placeat deleniti. Eligendi vitae
-      fugit quos? Temporibus tempore ex corporis aliquam corrupti, quis sed tempora eum doloribus sequi laborum!</p>
+  <div class="q-px-md">
+    <h5>Messages</h5>
+
+    <MessagePreview v-for="message in messages" :message="message" :key="message.timestamp" />
   </div>
 </template>
 
 
 <script setup lang="ts">
+import { defineProps } from 'vue'
+import MessagePreview from 'components/MessagePreview.vue'
+import { Message } from 'components/types/db'
+
+const { messages } = defineProps<{
+  messages: Message[];
+}>();
 
 </script>
 
