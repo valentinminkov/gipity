@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
-        <q-select v-model="model" :options="options" :borderless="true" />
+        <q-select borderless v-model="model" :options="options" :dark="true" />
         <q-toolbar-title>
           <b>G</b>i<b>p</b>i<b>t</b>y
         </q-toolbar-title>
