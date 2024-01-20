@@ -34,23 +34,54 @@ import { ref } from 'vue';
 import ChatHistory from 'components/ChatHistory.vue';
 import { Message } from 'src/components/types/db';
 
-const dummyMessages: Message[] = [
-  {
-    title: 'Welcome',
-    text: 'This is your first message!',
-    timestamp: '2024-01-19T21:29:06.207960'
-  },
-  {
-    title: 'Reminder',
-    text: "Don't forget the meeting at 10 AM",
-    timestamp: '2024-01-19T20:29:06.207967'
-  },
-  {
-    title: 'Update',
-    text: 'Your application has been updated',
-    timestamp: '2024-01-18T21:29:06.207975'
-  }
-]
+const dummyMessages: Message[] =
+  [
+    {
+      title: 'Welcome',
+      text: 'This is your first message!',
+      timestamp: '2024-01-19T21:29:06.207960'
+    },
+    {
+      title: 'Reminder',
+      text: "Don't forget the meeting at 10 AM",
+      timestamp: '2024-01-19T20:29:06.207967'
+    },
+    {
+      title: 'Update',
+      text: 'Your application has been updated',
+      timestamp: '2024-01-18T21:29:06.207975'
+    },
+    {
+      title: 'Alert',
+      text: 'Severe weather warning issued',
+      timestamp: '2024-01-18T14:11:44.225631'
+    },
+    {
+      title: 'News',
+      text: 'New cafe opens downtown',
+      timestamp: '2024-01-17T14:11:44.225653'
+    },
+    {
+      title: 'Announcement',
+      text: 'Office holiday next week',
+      timestamp: '2024-01-16T14:11:44.225658'
+    },
+    {
+      title: 'Birthday Reminder',
+      text: 'Remember to wish Alice tomorrow!',
+      timestamp: '2024-01-15T14:11:44.225663'
+    },
+    {
+      title: 'System Update',
+      text: 'Scheduled maintenance this weekend',
+      timestamp: '2024-01-14T14:11:44.225667'
+    },
+    {
+      title: 'Invitation',
+      text: "You're invited to our annual gala",
+      timestamp: '2024-01-13T14:11:44.225671'
+    }
+  ];
 const model = ref('GPT 4');
 const options = ref(['GPT 3.5', 'GPT 4', 'Other']);
 const leftDrawerOpen = ref(false);
