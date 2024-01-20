@@ -1,8 +1,8 @@
 <template>
   <div class="q-px-md">
-    <h5>Messages</h5>
-
-    <MessagePreview v-for="message in messages" :message="message" :key="message.timestamp" />
+    <div class="messagesContainer q-pt-md">
+      <MessagePreview v-for="message in messages" :message="message" :key="message.timestamp" />
+    </div>
   </div>
 </template>
 
@@ -18,4 +18,11 @@ const { messages } = defineProps<{
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.messagesContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  overflow-y: auto;
+}
+</style>
