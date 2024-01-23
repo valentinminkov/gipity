@@ -1,3 +1,3 @@
 export const config = {
-  OPENAI_SECRET_KEY: '',
+  serverUrl: 'http://localhost:3000',
 };
